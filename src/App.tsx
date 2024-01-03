@@ -1,9 +1,18 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+import routes from './routes';
+import { Layout, ErrorBoundary } from './components';
+
 function App() {
-  return (
-    <>
-      <h1>Hello world</h1>
-    </>
-  )
+	const router = createBrowserRouter([
+		{
+			element: <Layout />,
+			errorElement: <ErrorBoundary />,
+			children: routes,
+		},
+	]);
+
+	return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
