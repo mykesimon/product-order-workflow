@@ -5,7 +5,7 @@ import './style.css';
 const Header = () => {
 	return (
 		<div className='header'>
-			<Link to='/'>My App</Link>
+			<Link to='/'>Healthy Store</Link>
 		</div>
 	);
 };
