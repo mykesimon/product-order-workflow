@@ -1,0 +1,28 @@
+.custom-btn {
+	background-color: var(--accent-color);
+	color: var(--white);
+	cursor: pointer;
+	border: none;
+	outline: 2px solid transparent;
+	outline-offset: 2px;
+	padding: 0.8rem 1.8rem;
+	border-radius: 999px;
+	font-size: 1.1em;
+	font-weight: 500;
+	margin-top: 1.5rem;
+	transition: var(--transition-default);
+}
+
+.custom-btn:hover {
+	background-color: var(--accent-color-500);
+}
+
+.custom-btn:focus {
+	outline: 2px solid var(--accent-color-500);
+	outline-offset: 2px;
+}
+
+.custom-btn:disabled {
+	background-color: var(--gray-200);
+	cursor: not-allowed;
+}
