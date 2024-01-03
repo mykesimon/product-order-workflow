@@ -1,30 +1,44 @@
-# React + TypeScript + Vite
+# Healthy Store App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Home](https://i.ibb.co/YTn95Vj/Home.png)](https://i.ibb.co/YTn95Vj/Home.png)
 
-Currently, two official plugins are available:
+[![Product-selection](https://i.ibb.co/XC3P08S/Product-selection.png)](https://i.ibb.co/XC3P08S/Product-selection.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Description
 
-## Expanding the ESLint configuration
+Demo app for a purchase flow using a set of web API endpoints.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The purchase flow:
 
-- Configure the top-level `parserOptions` property like this:
+1. User visits the website
+2. Website presents a welcome message and a “Get started” button.
+3. User clicks “Get started”.
+4. Website presents a list with all the categories in alphabetical order.
+5. User selects the category they wish and clicks "Next".
+6. Website presents a list of products (from that category) in alphabetical order and for each product.
+  - Pre-selected is the default product variant of the default product for that category.
+7. User selects the product variant they wish and clicks "Next" (or just clicks “Next” if they are happy with the default selection).
+8. Website presents a form for the user to enter their contact data
+  - First name
+  - Last name
+  - Phone number
+  - Email address
+9. User enters their data and clicks "Next".
+10. Website presents a confirmation page showing all of the previous user entered data along with a “Pay now” button:
+  - The category, product, product variant along with the cost
+  - The user contact data
+11. User clicks “Pay now”
+12. Website presents a “Thank you for your purchase” page
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Getting Started
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+To run application:
+
+1. [Install Node](https://nodejs.org/en)
+2. Run `npm install` in this folder
+3. Run `npm run dev` in this folder.
+
+After this there should be two applications running:
+
+- React front-end: http://localhost:5173/
+- Express server: http://localhost:5008
